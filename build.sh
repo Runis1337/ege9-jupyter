@@ -8,7 +8,7 @@ cp ege9.ipynb 9_*.txt _contents/
 pip download comm --no-deps --only-binary=:all: -d wheels -q
 jupyter lite build --contents _contents --output-dir dist --pyodide "$PYODIDE" --piplite-wheels wheels/comm-*.whl
 # Главная страница сразу открывает ноутбук
-cat > dist/index.html <<'HTML'
+cat > dist/start.html <<'HTML'
 <!doctype html>
 <html lang="ru"><head><meta charset="utf-8">
 <meta http-equiv="refresh" content="0; url=notebooks/index.html?path=ege9.ipynb">
